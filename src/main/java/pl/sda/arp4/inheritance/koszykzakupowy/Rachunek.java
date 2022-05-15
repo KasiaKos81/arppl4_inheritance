@@ -5,9 +5,9 @@ import java.util.Arrays;
 
 public class Rachunek {
 
-    private LocalDateTime czasZakupu;
-    private Produkt[] produkty;
-    private double sumaBrutto;
+    protected LocalDateTime czasZakupu;
+    protected Produkt[] produkty;
+    protected double sumaBrutto;
 
     public Rachunek(Produkt[] produkty) {
         this.produkty = produkty;

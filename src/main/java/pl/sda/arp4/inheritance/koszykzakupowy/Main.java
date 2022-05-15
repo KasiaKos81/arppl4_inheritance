@@ -46,7 +46,23 @@ public class Main {
             tablicaProduktow[i] = produkt;
 
         }
-        Rachunek rachunek = new Rachunek(tablicaProduktow);
+        System.out.println("Czy będzie faktura czy paragon?");
+        String czyFaktura = scanner.next();
 
-        System.out.println(rachunek);
-    }}
+        if (czyFaktura.equalsIgnoreCase("faktura")) {
+            System.out.println("Proszę podać numer nip:");
+            String nip = scanner.next();
+
+            Faktura faktura = new Faktura(nip, tablicaProduktow);
+            System.out.println(faktura);
+        } else {
+            Rachunek rachunek = new Rachunek(tablicaProduktow);
+            System.out.println(rachunek);
+        }
+    }
+    //    Rachunek rachunek = new Rachunek(tablicaProduktow);
+
+      //  System.out.println(rachunek);
+
+
+    }
